@@ -1,0 +1,13 @@
+{
+  "name": "compare_excel_and_svg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hiepnh610/compare_excel_and_svg.git",
+  "author": "Hiep Nguyen <hiepnh610@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsdom": "^15.1.1",
+    "xlsx": "^0.15.1"
+  }
+}
