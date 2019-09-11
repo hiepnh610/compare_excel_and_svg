@@ -1,0 +1,32 @@
+#app
+  .container.pt-5
+    .row.justify-content-lg-center
+      .col-12.col-lg-8
+        .form-group
+          label(for='excel') Excel File
+
+          input#excel.form-control(
+            type='file'
+            accept='.xls, .xlsx'
+            ref='excelFile'
+            @change="onExcelFile"
+            required
+          )
+
+        .form-group
+          label(for='col') Column
+
+          input#col.form-control(type="text" v-model='col')
+
+        .form-group
+          label(for='svg') SVG File
+
+          input#svg.form-control(
+            type='file'
+            accept='image/svg+xml'
+            ref='svgFile'
+            @change="onSVGFile"
+            required
+          )
+
+        button.btn.btn-md.btn-primary(@click.prevent='sendData') Compare
