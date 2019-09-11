@@ -39,21 +39,17 @@ const getDataFromSVGFile = () => {
       const newSeat = new JSDOM(seat.outerHTML, { includeNodeLocations: true });
       const getSeatCode = newSeat.window.document.querySelector('g').getAttribute('id');
 
-      // console.log(getSeatCode);
-
       if (getSeatCode) {
         seatCode.push(getSeatCode);
       }
     }
 
-    // console.log('listCode', listCode.length);
-    // console.log('seatCode', seatCode.length);
+    console.log('Excel', listCode.length);
+    console.log('SVG', seatCode.length);
 
-    // if (seatCode.length === listCode.length) {
-    //   console.log(_.difference(seatCode, listCode));
-    // }
+    console.log('Excel', (_.difference(listCode, seatCode)).length, _.difference(listCode, seatCode));
 
-    console.log(_.difference(seatCode, listCode));
+    console.log('SVG', (_.difference(listCode, seatCode)).length, _.difference(seatCode, listCode));
   });
 };
 
